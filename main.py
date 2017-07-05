@@ -1,5 +1,5 @@
 from bottle import route,run,get,post,request,error
-from question import processing
+from question1 import processing
 
 query = ''
 
@@ -18,7 +18,7 @@ def pst_qry():
     global query
     question = request.json.get('query')
     query = str(question.lower())
-    result = processing(query)
+    result = processing1(query)
     return {'query' : query, 'result': result}
 
 
